@@ -39,4 +39,12 @@ draw_grid(4)
 
 
 def get_input(list_of_valid_choices):
-    
+    while True:
+        choice = input("Enter a value: ")
+        if choice == "quit":
+            return "quit"
+        elif choice in list_of_valid_choices:
+            return choice
+        else: 
+            print(end="")
+        
