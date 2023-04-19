@@ -35,7 +35,6 @@ def draw_grid(n):
 
     grid_str = top_border + "\n" + middle_rows + bottom_border
     print(grid_str)
-draw_grid(4)
 
 
 def get_input(list_of_valid_choices):
@@ -47,4 +46,9 @@ def get_input(list_of_valid_choices):
             return choice
         else: 
             print(end="")
-        
+
+def is_vertically_adjacent(n, first, second):
+    return abs(first - second) == n
+
+def is_horizontally_adjacent(n, first, second):
+    return first // n == second // n and abs(first - second) == 1
